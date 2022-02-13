@@ -1,0 +1,46 @@
+﻿@model WebUrlMonitoring.Models.ScheduleSettingViewModel
+
+@{
+    ViewData["Title"] = "UpdateScheduleSetting";
+    Layout = "~/Views/Member/_MemberLayout.cshtml";
+}
+
+<h3> ScheduleSetting Güncelle</h3>
+<hr />
+@if (TempData["Info"] != null)
+{
+    <div class="alert alert-info"> @TempData["Info"]</div>
+}
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="UpdateScheduleSetting">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="Id" class="form-control" />
+            <input type="hidden" asp-for="UserId" class="form-control" />
+            <input type="hidden" asp-for="UserEmail" class="form-control" />
+
+            <div class="form-group">
+                <label asp-for="Url" class="control-label"></label>
+                <input asp-for="Url" class="form-control" />
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Interval" class="control-label"></label>
+                <input asp-for="Interval" class="form-control" />
+                <span asp-validation-for="Interval" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Güncelle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
