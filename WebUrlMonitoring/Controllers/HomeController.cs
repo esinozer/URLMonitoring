@@ -1,6 +1,4 @@
 ﻿using Business.Abstract;
-using Core.Entities.Concrete;
-using Mapster;
 using Microsoft.AspNetCore.Mvc;
 using WebUrlMonitoring.Models;
 
